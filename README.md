@@ -1,4 +1,3 @@
-# 100DaysPython
 # 100 Days of Python Coding Challenge
 
 ![Python Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/2048px-Python.svg.png)
