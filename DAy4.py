@@ -1,11 +1,10 @@
 import random
-import math
 
-# heads_tails = random.randint(0,1)
-# if heads_tails == 1:
-#     print('Heads')
-# else:
-#     print('tails')
+heads_tails = random.randint(0,1)
+if heads_tails == 1:
+    print('Heads')
+else:
+    print('tails')
 
 all_states_usa = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut",
     "Massachusetts", "Maryland", "South Carolina", "New Hampshire", "Virginia",
@@ -18,33 +17,31 @@ all_states_usa = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecti
     "Wyoming", "Utah", "Oklahoma", "New Mexico", "Arizona", "Alaska", "Hawaii"]
 
 # Pick a random name from the list
-# names_string = ['Aaditya','Manav','Gaurab','Sushant','Mith','Aalok']
-# num_items = len(names_string)
-# random_choice = random.randint(0, num_items - 1)
-# person_to_pay = names_string[random_choice]
-# print(f'{person_to_pay} is going to pay for your food today!')
+names_string = ['Aaditya','Manav','Gaurab','Sushant','Mith','Aalok']
+num_items = len(names_string)
+random_choice = random.randint(0, num_items - 1)
+person_to_pay = names_string[random_choice]
+print(f'{person_to_pay} is going to pay for your food today!')
 
 
 #Treasure Map
-# line1 = [" ", " ", " "]
-# line2 = [" ", " ", " "]
-# line3 = [" ", " ", " "]
-#
-# map = [line1, line2, line3]
-# print("Hiding your treasure! X marks the spot.")
-# position = input("Where do you want to put the treasure? ")
-#
-# letter = position[0].lower()
-# abc = ['a', 'b', 'c']
-# letter_index = abc.index(letter)
-# number_index = int(position[1]) - 1
-# map[number_index][letter_index] = 'X'
-#
-# print(f"{line1}\n{line2}\n{line3}")
+line1 = [" ", " ", " "]
+line2 = [" ", " ", " "]
+line3 = [" ", " ", " "]
+
+map = [line1, line2, line3]
+print("Hiding your treasure! X marks the spot.")
+position = input("Where do you want to put the treasure? ")
+
+letter = position[0].lower()
+abc = ['a', 'b', 'c']
+letter_index = abc.index(letter)
+number_index = int(position[1]) - 1
+map[number_index][letter_index] = 'X'
+
+print(f"{line1}\n{line2}\n{line3}")
 
 #RPS game
-# Rock Paper Scissors ASCII Art
-
 # Rock
 rock = (
     ("""
