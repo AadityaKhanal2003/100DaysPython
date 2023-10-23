@@ -16,15 +16,15 @@ all_states_usa = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecti
     "North Dakota", "South Dakota", "Montana", "Washington", "Idaho",
     "Wyoming", "Utah", "Oklahoma", "New Mexico", "Arizona", "Alaska", "Hawaii"]
 
-# Pick a random name from the list
+# # Pick a random name from the list
 names_string = ['Aaditya','Manav','Gaurab','Sushant','Mith','Aalok']
 num_items = len(names_string)
 random_choice = random.randint(0, num_items - 1)
 person_to_pay = names_string[random_choice]
 print(f'{person_to_pay} is going to pay for your food today!')
-
-
-#Treasure Map
+#
+#
+# #Treasure Map
 line1 = [" ", " ", " "]
 line2 = [" ", " ", " "]
 line3 = [" ", " ", " "]
