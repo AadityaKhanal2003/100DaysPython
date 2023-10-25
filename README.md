@@ -19,12 +19,13 @@ Throughout this challenge, I've been focusing on various aspects of Python devel
 - Building small Python applications and utilities
 
 ## Getting Started
--Day1: Working with Variable in Python to Manage Data
--Day2: Understanding Data Types and working with strings
--Day3: Control Flow and Logical Operators
--Day4: Randomisation and Lists
--Day5: Loops
--Day6: Python Functions and Karel (Reeborgs's world practiced)
+- Day1: Working with Variable in Python to Manage Data
+- Day2: Understanding Data Types and working with strings
+- Day3: Control Flow and Logical Operators
+- Day4: Randomisation and Lists
+- Day5: Loops
+- Day6: Python Functions and Karel (Reeborgs's world practiced)
+- Day 7: Hangman Project
 
 
 
