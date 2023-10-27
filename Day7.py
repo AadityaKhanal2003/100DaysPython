@@ -93,6 +93,7 @@ while not game_complete:
         if total_lives == 0:
             game_complete = True
             print(hangman_figure[0])
+            print("You could not save the man!")
     print(dashes_list)
     if "_" not in dashes_list:
         game_complete = True

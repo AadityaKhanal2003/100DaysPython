@@ -26,7 +26,7 @@ Throughout this challenge, I've been focusing on various aspects of Python devel
 - Day5: Loops
 - Day6: Python Functions and Karel (Reeborgs's world practiced)
 - Day 7: Hangman Project
-
+- Day 8: Function Parameters and Caesar Cipher
 
 
 If you'd like to follow along with my journey or try out any of the projects, you can clone this repository to your local machine using the following command:
