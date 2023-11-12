@@ -19,14 +19,17 @@ Throughout this challenge, I've been focusing on various aspects of Python devel
 - Building small Python applications and utilities
 
 ## Getting Started
-- Day1: Working with Variable in Python to Manage Data
-- Day2: Understanding Data Types and working with strings
-- Day3: Control Flow and Logical Operators
-- Day4: Randomisation and Lists
-- Day5: Loops
-- Day6: Python Functions and Karel (Reeborgs's world practiced)
+- Day 1: Working with Variable in Python to Manage Data
+- Day 2: Understanding Data Types and working with strings
+- Day 3: Control Flow and Logical Operators
+- Day 4: Randomisation and Lists
+- Day 5: Loops
+- Day 6: Python Functions and Karel (Reeborgs's world practiced)
 - Day 7: Hangman Project
 - Day 8: Function Parameters and Caesar Cipher
+- Day 9: Dictionaries, Nesting and the Silent auction game
+- Day 10: Built a calculator
+- Day 11: BlackJack Capstone project
 
 
 If you'd like to follow along with my journey or try out any of the projects, you can clone this repository to your local machine using the following command:
