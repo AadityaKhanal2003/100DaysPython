@@ -58,25 +58,24 @@ def calculate_score():
                         comp_new_card = deal_cards(cards)
                         computer_cards.append(comp_new_card)
                         total_cards_comp = sum(computer_cards)
-                        if total_cards_comp > 21:
-                            game_over = False
-                            print(f'Dealer Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
-                            print(f'Client cards: {user_cards} | Score: {total_cards_user} (WON)')
-                        elif total_cards_comp == 21:
-                            print(f'BLACKJACK, Dealer cards: {computer_cards} Score: {total_cards_comp} (WON)')
-                            print(f'Client Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
-                            game_over = False
-                        elif total_cards_comp > 21:
-                            print(f'Dealer Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
-                            print(f'Client cards: {user_cards} | Score: {total_cards_user} (WON)')
-                            game_over = False
-                        else:
-                            print("Technical issue occured! Press 'r' to restart the game or 'q' to quit")
-                            restart = input("What is your choice?: ").lower()
-                            if restart == 'r':
-                                calculate_score()
-                            else:
-                                game_over = False
+                    elif total_cards_comp > 21:
+                        game_over = False
+                        print(f'Dealer Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
+                        print(f'Client cards: {user_cards} | Score: {total_cards_user} (WON)')
+                    elif total_cards_comp == 21:
+                        print(f'BLACKJACK, Dealer cards: {computer_cards} Score: {total_cards_comp} (WON)')
+                        print(f'Client Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
+                        game_over = False
+                    else:
+                        print(f'Client cards: {user_cards}\n Dealer cards: {computer_cards}')
                 else:
-                    game_over = False
+                    print("Technical issue occured! Press 'r' to restart the game or 'q' to quit")
+                    restart = input("What is your choice?: ").lower()
+                    if restart == 'r':
+                            calculate_score()
+                    else:
+                        game_over = False
+
+            else:
+                game_over = False
 calculate_score()
