@@ -29,8 +29,6 @@ def calculate_score():
     total_cards_user = sum(user_cards)
     if (user_cards[0] == 11 and user_cards[1] == 10) or (user_cards[0] == 10 and user_cards[1] == 11):
         print(f"Blackjack !!! Client wins. Client cards: {user_cards} | Score: {total_cards_user} \n Dealer cards: {computer_cards} | Score: {total_cards_comp} ")
-
-        return 0
     elif (computer_cards[0] == 11 and computer_cards[1] == 10) or (user_cards[0] == 10 and user_cards[1] == 11):
         print(f"Dealer's Blackjack. Better luck next time. Dealer cards: {computer_cards} | Score: {total_cards_comp} \n Client cards: {user_cards} | Score: {total_cards_user}")
     else:
