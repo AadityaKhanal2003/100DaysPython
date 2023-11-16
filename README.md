@@ -29,7 +29,7 @@ Throughout this challenge, I've been focusing on various aspects of Python devel
 - Day 8: Function Parameters and Caesar Cipher
 - Day 9: Dictionaries, Nesting and the Silent auction game
 - Day 10: Built a calculator
-- Day 11: BlackJack Capstone project
+- Day 11: BlackJack Capstone project (refer to: BlackjackDay11.ipynb for results.)
 
 
 If you'd like to follow along with my journey or try out any of the projects, you can clone this repository to your local machine using the following command:
