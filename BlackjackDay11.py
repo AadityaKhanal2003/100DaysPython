@@ -39,7 +39,7 @@ def calculate_score():
             if total_cards_user < 21:
                 print(
                     f' Dealer cards: {computer_cards[0]} is the first card.\n Client cards: {user_cards}, total: {total_cards_user}')
-                draw_more = input("Do you want to draw one more card: (y/n)").lower()
+                draw_more = input("Client!, Do you want to draw one more card: (y/n)").lower()
                 if draw_more == 'y':
                     new_card = deal_cards(cards)
                     user_cards.append(new_card)
@@ -54,29 +54,36 @@ def calculate_score():
                     else:
                        pass
                 elif draw_more == 'n':
-                    if total_cards_comp < 21:
+                    print(f'Dealer revealed their card: {computer_cards}| Score: {total_cards_comp}')
+                    draw_more = input("Dealer, do you want to draw one more card: (y/n)").lower()
+                    if draw_more == 'y':
                         comp_new_card = deal_cards(cards)
                         computer_cards.append(comp_new_card)
                         total_cards_comp = sum(computer_cards)
-                        print(f'Dealer revealed their card: {computer_cards}| Score: {total_cards_comp}')
-                        print(f'Client cards: {user_cards}| Score: {total_cards_user}')
-                    elif total_cards_comp > 21:
-                        game_over = False
-                        print(f'Dealer Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
-                        print(f'Client cards: {user_cards} | Score: {total_cards_user} (WON)')
-                    elif total_cards_comp == 21:
-                        print(f'BLACKJACK, Dealer cards: {computer_cards} Score: {total_cards_comp} (WON)')
-                        print(f'Client Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
-                        game_over = False
-                    elif total_cards_comp == total_cards_user:
-                        print("DRAW!!")
+                    elif draw_more == 'n':
+                        if total_cards_comp == total_cards_user:
+                            print("DRAW!!")
+                        elif total_cards_comp < 21:
+                            print(f'Dealer Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
+                            print(f'Client cards: {user_cards} | Score: {total_cards_user} (WON)')
+                        elif total_cards_comp > 21:
+                            print(f'Dealer Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
+                            print(f'Client cards: {user_cards} | Score: {total_cards_user} (WON)')
+                            game_over = False
+                        elif total_cards_comp == 21:
+                            print(f'BLACKJACK, Dealer cards: {computer_cards} Score: {total_cards_comp} (WON)')
+                            print(f'Client Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
+                            game_over = False
+                        else:
+                            print(f'Client cards: {user_cards}\n Dealer cards: {computer_cards}')
                     else:
-                        print(f'Client cards: {user_cards}\n Dealer cards: {computer_cards}')
+                        game_over = False
+
                 else:
                     print("Technical issue occured! Press 'r' to restart the game or 'q' to quit")
                     restart = input("What is your choice?: ").lower()
                     if restart == 'r':
-                            calculate_score()
+                        print('Restarting ...')
                     else:
                         game_over = False
 
