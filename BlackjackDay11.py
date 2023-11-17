@@ -42,7 +42,9 @@ def calculate_score():
                     new_card = deal_cards(cards)
                     user_cards.append(new_card)
                     total_cards_user = sum(user_cards)
-                    if total_cards_user == 21:
+                    if total_cards_user == total_cards_comp:
+                        print("DRAW!!!")
+                    elif total_cards_user == 21:
                         print(f'BLACKJACK, Client cards: {user_cards} | Score: {total_cards_user} (WON)')
                         print(f'Dealer Cards: {computer_cards} | Score: {total_cards_comp} (LOST)')
                         game_over = False
