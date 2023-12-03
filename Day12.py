@@ -11,36 +11,44 @@ a8"    `Y88 88       88 a8P_____88 I8[    "" I8[    ""
 ''')
 print("Welcome to number guessing game.\nI'm thinking of a number between 1 and 100.")
 difficulty_level = input('Type "easy" or "hard": ')
-
 random_number = random.randint(1, 100)
-guess_count_hard = 5
-guess_count_easy = 10
-while True:
-    def easy_level(num_guessed, g_c):
+guess_count = 10 if difficulty_level == 'easy' else 10
+while guess_count > 0:
+    def easy_level(num_guessed):
+        global guess_count
         if random_number == num_guessed:
             print("You've guessed it right.")
         elif random_number != num_guessed:
-            g_c -= 1
-            print(f"Looks like you've guessed it wrong. Guesses remaining: {g_c}")
+            if num_guessed > random_number:
+                print("Too high.")
+                guess_count -= 1
+                print(f"Looks like you've guessed it wrong. Guesses remaining: {guess_count}")
+            elif num_guessed < random_number:
+                print("Too Low.")
+                guess_count -= 1
+                print(f"Looks like you've guessed it wrong. Guesses remaining: {guess_count}")
         else:
-            print('Invalid Input.')
+            print(f'Correct answer: {random_number}')
+
 
 
     def hard_level(num_guessed, g_c):
         if random_number == num_guessed:
             print("You've guessed it right.")
         elif random_number != num_guessed:
-            g_c -= 1
             print(f"Looks like you've guessed it wrong. Guesses remaining: {g_c}")
         else:
             print('Invalid Input.')
 
 
     if difficulty_level == 'easy':
-        user_req = int(input("Guess the number: "))
-        easy_level(user_req, guess_count_easy)
+        num_to_guess = int(input("Guess a number: "))
+        easy_level(num_to_guess)
     elif difficulty_level == 'hard':
-        user_req = int(input("Guess the number: "))
-        hard_level(user_req, guess_count_hard)
+        num_to_guess = int(input("Guess a number: "))
+        hard_level(num_to_guess)
     else:
         print('Error!')
+
+
+
