@@ -14,10 +14,11 @@ difficulty_level = input('Type "easy" or "hard": ')
 random_number = random.randint(1, 100)
 guess_count = 10 if difficulty_level == 'easy' else 10
 while guess_count > 0:
-    def easy_level(num_guessed):
+    def game(num_guessed):
         global guess_count
         if random_number == num_guessed:
             print("You've guessed it right.")
+            guess_count = 0
         elif random_number != num_guessed:
             if num_guessed > random_number:
                 print("Too high.")
@@ -27,28 +28,16 @@ while guess_count > 0:
                 print("Too Low.")
                 guess_count -= 1
                 print(f"Looks like you've guessed it wrong. Guesses remaining: {guess_count}")
+            elif guess_count == 0:
+                print(f'Correct answer: {random_number}')
         else:
-            print(f'Correct answer: {random_number}')
-
-
-
-    def hard_level(num_guessed, g_c):
-        if random_number == num_guessed:
-            print("You've guessed it right.")
-        elif random_number != num_guessed:
-            print(f"Looks like you've guessed it wrong. Guesses remaining: {g_c}")
-        else:
-            print('Invalid Input.')
-
+            print('Invalid choice! ')
 
     if difficulty_level == 'easy':
         num_to_guess = int(input("Guess a number: "))
-        easy_level(num_to_guess)
+        game(num_to_guess)
     elif difficulty_level == 'hard':
         num_to_guess = int(input("Guess a number: "))
-        hard_level(num_to_guess)
+        game(num_to_guess)
     else:
         print('Error!')
-
-
-
